@@ -3,14 +3,16 @@
 {% block head_title %}LogMyRow{% endblock head_title %}
 
 {% block content %}
-<h1>Add Workout</h1>
-{% if errors %}
-  {{ errors }}
-{% endif %}
-<form method="POST"> {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Save</button>
-</form>
+<section class="addworkout">
+  <h1>Add Workout</h1>
+  {% if errors %}
+    {{ errors }}
+  {% endif %}
+  <form method="POST"> {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+</section>
 
 {% endblock %}
 

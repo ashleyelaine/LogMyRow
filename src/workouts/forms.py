@@ -8,10 +8,10 @@ class RowingWorkoutCreateForm(ModelForm):
         model = RowingWorkout
         fields = ('date','time','meters','notes')
         labels = {
-            'time': _('Total Time'),
+            'time': _('Total Time (min)'),
             'meters': _('Total Meters'),
         }
         widgets = {
             'date': SelectDateWidget(),
-            'notes': Textarea(attrs={'cols': 40, 'rows': 10}),
+            'notes': Textarea(attrs={'cols': 40, 'rows': 5}),
         }

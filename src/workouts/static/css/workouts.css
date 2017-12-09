@@ -1,0 +1,202 @@
+/********************
+GLOBAL
+********************/
+body, html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background-image: url("/static/img/home.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height:750px;
+  height:100vh;
+  padding-bottom: 80px;
+  min-height: 750px;
+}
+
+.container {
+  max-width: 1080px;
+  width: 100%;
+  padding: 0 30px;
+}
+
+h1,h2,h3,h4,h5,h6,p,li{
+  margin:0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #000;
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.btn, button {
+  background: #000;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 10px 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid #000;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn:hover, button:hover {
+  background: transparent;
+  color: #000;
+}
+
+form p {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  min-width: 200px;
+}
+
+input, textarea, select {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+
+textarea {
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 275px;
+}
+
+button[type="submit"] {
+  font-size: 20px;
+  width: 100%;
+}
+
+
+/********************
+HEADER
+********************/
+header {
+  padding: 20px 0 60px;
+}
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header__left {
+  width: 50%;
+}
+
+header .header__right {
+  width: 50%;
+  text-align: right;
+}
+
+.logo {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #000;
+  font-size: 72px;
+}
+
+.logo a {
+  color: #000;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #000;
+}
+
+
+/********************
+HOME/ADD WORKOUT
+********************/
+.addworkout {
+  text-align: center;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.addworkout form {
+  text-align: left;
+}
+
+/********************
+WORKOUTS LIST
+********************/
+.myrows {
+  width: 100%;
+  font-size: 18px;
+  margin-top: 40px;
+  width: 100%;
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.myrows__headers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.myrows__headers h3 {
+  width: 25%;
+  text-align: left;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.myrows__single {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.myrows__single .item {
+  width: 25%;
+  text-align: left;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+.myrows__single .item .btn {
+  width: 90%;
+  padding: 5px;
+}
+
+/********************
+WORKOUTS DETAIL
+********************/

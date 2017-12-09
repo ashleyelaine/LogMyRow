@@ -3,17 +3,25 @@
 {% block head_title %}Workouts | {{ block.super }}{% endblock head_title %}
 
 {% block content %}
-<h1>Workouts List</h1>
-
-<ul>
+<h1>My Workouts</h1>
+<div class="myrows">
+  <div class="myrows__headers">
+    <h3>Date</h3>
+    <h3>Total Time</h3>
+    <h3>Total Meters</h3>
+    <h3>Notes</h3>
+  </div>
+  <div class="myrows__workouts">
   {% for obj in object_list %}
-    <li><a href="/workouts/{{ obj.id }}/">{{ obj }}</a><br />
-      {{ obj }} : <br />
-      {{ obj.date }} <br />
-      {{ obj.time }} <br />
-      {{ obj.meters }} <br />
-      {{ obj.notes }}
-    </li>
+
+    <div class="myrows__single">
+      <div class="item date"><a class="btn" href="/workouts/{{ obj.id }}/">{{ obj.date }}</a></div>
+      <div class="item time"><strong>{{ obj.time }}</strong> Minutes </div>
+      <div class="item meters"><strong>{{ obj.meters }}</strong> Meters </div>
+      <div class="item date">{{ obj.notes }} </div>
+    </div>
+
   {% endfor %}
-</ul>
+  </div>
+</div>
 {% endblock %}
