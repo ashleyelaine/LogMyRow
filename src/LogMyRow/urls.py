@@ -1,4 +1,4 @@
-"""LogMyRow URL Configuration
+"""muypicky URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.views.generic import TemplateView
+
+from workouts.views import (
+    WorkoutCreateView,
+    WorkoutListView,
+    WorkoutDetailView,
+)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', WorkoutCreateView.as_view()),
+    url(r'^workouts/$', WorkoutListView.as_view()),
+    url(r'^workouts/(?P<workout_id>\w+)/$', WorkoutDetailView.as_view()),
 ]

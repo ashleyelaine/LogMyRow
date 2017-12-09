@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block head_title %}Workout | {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+<h1>{{ object.date }}</h1>
+<p>{{ object.time }}</p>
+<p>{{ object.meters }}</p>
+<p>{{ object.notes }}</p>
+{% endblock %}
