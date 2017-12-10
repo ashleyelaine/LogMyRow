@@ -10,6 +10,7 @@ body, html {
   background-repeat: no-repeat;
   background-position: center;
   color: #000;
+  height: 100%;
 }
 
 .wrapper {
@@ -223,6 +224,10 @@ MOBILE
 ********************/
 @media(max-width: 768px) {
   /* GLOBAL */
+  body, html {
+    height: auto;
+  }
+  
   .mobile {
     display: block;
   }
