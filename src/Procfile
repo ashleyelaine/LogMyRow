@@ -1,1 +1,1 @@
-web: gunicorn LogMyRow.wsgi:application --log-file -
+web: gunicorn LogMyRow.wsgi
