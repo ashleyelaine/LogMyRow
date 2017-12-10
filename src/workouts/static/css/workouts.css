@@ -227,7 +227,7 @@ MOBILE
   body, html {
     height: auto;
   }
-  
+
   .mobile {
     display: block;
   }
@@ -263,6 +263,10 @@ MOBILE
   /* FORM */
   form p {
     padding-bottom: 20px;
+  }
+
+  select:first-of-type {
+    width: 100%;
   }
 
   /* LISTING */
