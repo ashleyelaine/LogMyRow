@@ -3,8 +3,13 @@
 {% block head_title %}Workout | {{ block.super }}{% endblock head_title %}
 
 {% block content %}
-<h1>{{ object.date }}</h1>
-<p>{{ object.time }}</p>
-<p>{{ object.meters }}</p>
-<p>{{ object.notes }}</p>
+<div class="singleworkout box">
+  <h1>{{ object.date }}</h1>
+  <h2>Total Time</h2>
+  <p>{{ object.time }} Minutes</p>
+  <h2>Total Meters</h2>
+  <p>{{ object.meters }} Meters</p>
+  <h2>Notes: </h2>
+  <p>{{ object.notes }}</p>
+</div>
 {% endblock %}

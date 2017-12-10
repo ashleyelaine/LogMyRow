@@ -13,5 +13,5 @@ class RowingWorkoutCreateForm(ModelForm):
         }
         widgets = {
             'date': SelectDateWidget(),
-            'notes': Textarea(attrs={'cols': 40, 'rows': 5}),
+            'notes': Textarea(attrs={'cols': 40, 'rows': 3}),
         }

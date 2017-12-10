@@ -4,19 +4,16 @@ GLOBAL
 body, html {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  height: 100%;
   box-sizing: border-box;
-}
-
-.wrapper {
   background-image: url("/static/img/home.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height:750px;
-  height:100vh;
-  padding-bottom: 80px;
-  min-height: 750px;
+  color: #000;
+}
+
+.wrapper {
+  padding-bottom: 100px;
 }
 
 .container {
@@ -33,8 +30,17 @@ h1,h2,h3,h4,h5,h6,p,li{
 h1 {
   font-family: 'Gloria Hallelujah', cursive;
   color: #000;
-  font-size: 55px;
+  font-size: 50px;
   margin-bottom: 15px;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .btn, button {
@@ -66,6 +72,7 @@ label {
   text-transform: uppercase;
   font-size: 20px;
   min-width: 200px;
+  color: #000;
 }
 
 input, textarea, select {
@@ -75,13 +82,14 @@ input, textarea, select {
   padding: 2px 4px;
   border-radius: 4px;
   border: 1px solid #999;
+  margin-bottom: 3px;
 }
 
 textarea {
   width: 100%;
 }
 
-input[type="text"] {
+input[type="number"] {
   width: 275px;
 }
 
@@ -90,12 +98,22 @@ button[type="submit"] {
   width: 100%;
 }
 
+.box {
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.mobile {
+  display: none;
+}
+
 
 /********************
 HEADER
 ********************/
 header {
-  padding: 20px 0 60px;
+  padding: 20px 0 50px;
 }
 
 header .container {
@@ -136,11 +154,8 @@ HOME/ADD WORKOUT
 .addworkout {
   text-align: center;
   width: 100%;
-  max-width: 540px;
+  max-width: 545px;
   margin: 0 auto;
-  background: rgba(255,255,255,0.7);
-  border-radius: 10px;
-  padding: 30px;
 }
 
 .addworkout form {
@@ -153,11 +168,8 @@ WORKOUTS LIST
 .myrows {
   width: 100%;
   font-size: 18px;
-  margin-top: 40px;
+  margin-top: 25px;
   width: 100%;
-  background: rgba(255,255,255,0.7);
-  border-radius: 10px;
-  padding: 30px;
 }
 
 .myrows__headers {
@@ -176,6 +188,7 @@ WORKOUTS LIST
   margin-bottom: 20px;
   padding-bottom: 5px;
   font-weight: bold;
+  color: #000;
 }
 
 .myrows__single {
@@ -190,6 +203,7 @@ WORKOUTS LIST
   text-align: left;
   padding-bottom: 20px;
   font-size: 20px;
+  color: #000;
 }
 
 .myrows__single .item .btn {
@@ -200,3 +214,80 @@ WORKOUTS LIST
 /********************
 WORKOUTS DETAIL
 ********************/
+.singleworkout p {
+  padding-bottom: 30px;
+}
+
+/********************
+MOBILE
+********************/
+@media(max-width: 768px) {
+  /* GLOBAL */
+  .mobile {
+    display: block;
+  }
+
+  header .container {
+    display: block;
+  }
+
+  header .header__left {
+    width: 100%;
+    text-align: center;
+  }
+
+  header .header__right  {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 54px;
+    padding-bottom: 35px;
+  }
+
+  .btn, button {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 38px;
+    text-align: left;
+  }
+
+  /* FORM */
+  form p {
+    padding-bottom: 20px;
+  }
+
+  /* LISTING */
+  .myrows__headers {
+    display: none;
+  }
+
+  .myrows__single {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .myrows__single .item {
+    width: 100%;
+  }
+
+  .myrows__single .item h3 {
+    color: #000;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .myrows__single .item.notes {
+    display: none;
+  }
+
+  .myrows__single .item .btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}
