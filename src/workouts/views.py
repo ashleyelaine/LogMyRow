@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
@@ -8,10 +9,16 @@ from .forms import RowingWorkoutCreateForm
 from .models import RowingWorkout
 
 # CREATE WORKOUT FORM VIEW [HOME]
+@login_required
 class WorkoutCreateView(CreateView):
     form_class = RowingWorkoutCreateForm
     template_name = 'workouts/form.html'
     success_url = "/workouts/"
+
+    def form_valid(self, form):
+        instance = form.save(commit=False)
+        instance.owner = self.request.user
+        return super(WorkoutCreateView, self).form_valid(form)
 
 # WORKOUTS LIST VIEW
 class WorkoutListView(ListView):
