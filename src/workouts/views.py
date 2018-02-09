@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
@@ -9,8 +10,7 @@ from .forms import RowingWorkoutCreateForm
 from .models import RowingWorkout
 
 # CREATE WORKOUT FORM VIEW [HOME]
-@login_required
-class WorkoutCreateView(CreateView):
+class WorkoutCreateView(LoginRequiredMixin, CreateView):
     form_class = RowingWorkoutCreateForm
     template_name = 'workouts/form.html'
     success_url = "/workouts/"
